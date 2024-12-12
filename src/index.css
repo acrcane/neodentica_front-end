@@ -1,0 +1,93 @@
+:root {
+    --primary-color-white: #ffffff;
+    --primary-color-black: #06050a;
+    --primary-color-violet: #ae57bf;
+    --secondary-color-dark-violet: #1e1b35;
+    --secondary-color-red: #ef5050;
+    --secondary-color-orange: #ff9d43;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Innerspace", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    /* background-color: var(--primary-color-black); */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+address {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
