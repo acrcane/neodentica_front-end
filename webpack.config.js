@@ -2,12 +2,14 @@ const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const isDevelopment = process.env.NODE_ENV !== "production";
+
 module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
-        publicPath: "/neodentica_front-end/",
+        publicPath: "/neodentica_front-end/", 
     },
     module: {
         rules: [
@@ -18,7 +20,7 @@ module.exports = {
                     loader: "babel-loader",
                     options: {
                         presets: ["@babel/preset-env", "@babel/preset-react"],
-                        plugins: [require.resolve("react-refresh/babel")],
+                        plugins: isDevelopment ? [require.resolve("react-refresh/babel")] : [],
                     },
                 },
             },
@@ -35,7 +37,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./public/index.html",
         }),
-        new ReactRefreshWebpackPlugin(),
+        ...(isDevelopment ? [new ReactRefreshWebpackPlugin()] : []),
     ],
     devServer: {
         static: path.join(__dirname, "dist"),
@@ -49,5 +51,6 @@ module.exports = {
             stats: "none", 
         },
     },
-    devtool: "source-map",
+    devtool: isDevelopment ? "source-map" : false,
 };
+
