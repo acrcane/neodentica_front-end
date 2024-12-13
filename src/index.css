@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
 :root {
+    --primary-font: 'Ubuntu', sans-serif;
     --primary-color-white: #ffffff;
     --primary-color-black: #06050a;
     --primary-color-violet: #ae57bf;
@@ -21,7 +24,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: "Innerspace", serif;
+    font-family: 'Rubik', sans-serif;
+    /* color: var(--primary-color-white); */
     font-size: 16px;
     line-height: 1.5;
     /* background-color: var(--primary-color-black); */
