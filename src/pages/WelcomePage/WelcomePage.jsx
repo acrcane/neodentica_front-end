@@ -1,15 +1,13 @@
 import React from 'react'
-import { Container, Title, List, ListItem, Icon, Text, Test} from './WelcomePage.styled'
+import { Container, Title, List, ListItem, Icon, Text, Button} from './WelcomePage.styled'
 import icons from '../../icons/symbol-defs.svg'
-import image from '../../icons/logo.png'
+
 
 
 const WelcomePage = () => {
   return (
     <Container> 
-      {/* {console.log(icons)} */}
         <Title>Welcome to Neo salary calc</Title>
-        {/* <Test src={`${image}`}/> */}
         <List>
           <ListItem>
             <Icon><use href={`${icons}#icon-table2`}></use></Icon>
@@ -24,6 +22,7 @@ const WelcomePage = () => {
             <Text>Issuing leave requests in progress</Text>
           </ListItem>
         </List>
+        <Button>Try calc</Button>
     </Container>
   )
 }
